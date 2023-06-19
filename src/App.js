@@ -1,6 +1,7 @@
 import React, {useState} from 'react';
 import './App.css';
 import TodoTable from './components/TodoTable';
+import NewTodoForm from './components/NewTodoForm';
 
 function App() {
 
@@ -8,9 +9,7 @@ function App() {
     {rowNumber: 1, rowDescription: 'Feed Old Doggo', rowAssigned: 'Nelso'},
     {rowNumber: 2, rowDescription: 'Water Plants', rowAssigned: 'Father'},
     {rowNumber: 3, rowDescription: 'Cook Dinner', rowAssigned: 'Nelso'},
-    {rowNumber: 4, rowDescription: 'Sweep House', rowAssigned: 'Yogi'},
-    {rowNumber: 5, rowDescription: 'Practice React', rowAssigned: 'Albert'},
-    {rowNumber: 6, rowDescription: 'Mop Home', rowAssigned: 'Albert'}
+    {rowNumber: 4, rowDescription: 'Sweep House', rowAssigned: 'Yogi'}
   ]
   )
 
@@ -23,7 +22,7 @@ function App() {
       };
 
       setTodoOptions(todoOptions => [...todoOptions, newTodo]);
-      
+
     }
 
   }
@@ -40,6 +39,8 @@ function App() {
         <button className = 'btn btn-primary' onClick = {addTodo}>
           Add New Todo
         </button>
+
+        <NewTodoForm/>
 
       </div>
     </div>
