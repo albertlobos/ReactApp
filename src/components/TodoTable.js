@@ -15,7 +15,7 @@ return(
     <tbody>
     {props.todos.map(todo => (
         <TodoRowItem
-            rowNumber = {todo.rowNumnber}
+            rowNumber = {todo.rowNumber}
             rowDescription={todo.rowDescription}
             rowAssigned={todo.rowAssigned}
         />
