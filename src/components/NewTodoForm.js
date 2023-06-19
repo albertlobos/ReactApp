@@ -8,7 +8,9 @@ function NewTodoForm(props){
 
     const submitTodo = () => {
         if(description !== '' && assigned !== ''){
-            
+            props.addTodo(description, assigned);
+            setDescription('');
+            setAssigned('');
         }
     }
 
@@ -48,7 +50,11 @@ function NewTodoForm(props){
                     ></textarea>
                 </div>
 
-                <button type='button' className='btn btn-primary mt-3'>Add Todo</button>
+                <button 
+                type='button' 
+                className='btn btn-primary mt-3'
+                onClick={submitTodo}
+                >Add Todo</button>
             </form>
         </div>
     )
