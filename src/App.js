@@ -14,16 +14,19 @@ function App() {
   )
 
   const addTodo = (description, assigned) => {
+    let rowNumber = 0;
     if (todoOptions.length > 0){
-      const newTodo = {
-      rowNumber: todoOptions.length + 1, 
+      rowNumber = todoOptions[todoOptions.length-1].rowNumber + 1;
+    } else {
+      rowNumber = 1;
+    }
+    const newTodo = {
+      rowNumber: rowNumber, 
       rowDescription: description,
       rowAssigned: assigned
       };
 
       setTodoOptions(todoOptions => [...todoOptions, newTodo]);
-
-    }
 
   }
 
