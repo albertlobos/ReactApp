@@ -2,6 +2,7 @@ import React, {useState} from 'react';
 import './App.css';
 import TodoTable from './components/TodoTable';
 import NewTodoForm from './components/NewTodoForm';
+import AccordionMenu from './components/AccordionMenu';
 
 function App() {
 
@@ -56,9 +57,14 @@ function App() {
         {showAddTodoForm? 'Close New Todo': 'New Todo'}
         </button>
 
-      {showAddTodoForm &&
-        <NewTodoForm addTodo={addTodo}/>
-      }
+        {showAddTodoForm &&
+          <NewTodoForm addTodo={addTodo}/>
+        }
+        {
+          console.log("Random Console log from App.js")
+        }
+
+      {/* <AccordionMenu/> */}
       </div>
     </div>
    </div>
