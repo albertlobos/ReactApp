@@ -3,7 +3,7 @@ import TodoRowItem from "./TodoRowItem"
 
 
 
-function TodoTable(props){
+function TodoTable(props : {todoOptions: ToDoModel[], deleteTodo: Function} ){
 return(
 <table className="table table-hover">
     <thead>
