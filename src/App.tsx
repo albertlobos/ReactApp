@@ -1,10 +1,10 @@
 import React, {useState} from 'react';
 import './App.css';
-import TodoTable from './components/TodoTable';
-import NewTodoForm from './components/NewTodoForm';
+import { TodoTable } from './components/TodoTable';
+import { NewTodoForm } from './components/NewTodoForm';
 //import AccordionMenu from './components/AccordionMenu';
 
-function App() {
+export const App = () => {
 
   const [showAddTodoForm, setShowAddTodoForm] = useState(false);
 
@@ -67,5 +67,3 @@ function App() {
    </div>
   );
 }
-
-export default App;
