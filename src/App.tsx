@@ -53,8 +53,9 @@ export const App = () => {
 
         <button 
         className = 'btn btn-primary'
-        onClick={() => setShowAddTodoForm(!showAddTodoForm)}>
-        {showAddTodoForm? 'Close New Todo': 'New Todo'}
+        onClick={() => setShowAddTodoForm(!showAddTodoForm)}
+        >
+        {showAddTodoForm? 'Close New Todo': 'New Todo Dude'}
         </button>
 
         {showAddTodoForm &&
